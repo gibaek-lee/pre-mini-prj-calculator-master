@@ -1,0 +1,32 @@
+body {
+  font-family: Verdana,Geneva,sans-serif;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.numButton {
+  padding: 5px 5px 5px 5px;
+  border-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 15pt;
+}
+
+.calculate{
+  padding: 5px 5px 5px 5px;
+  border-color: white;
+  width: 30px;
+  height: 30px;
+  font-size: 15pt;
+}
+
+.num-container{
+  margin: auto
+
+}
+.cal-container{
+  margin: auto
+
+}
+
