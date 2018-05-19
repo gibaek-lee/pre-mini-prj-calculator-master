@@ -2,7 +2,7 @@
 
 //export {delFunc};
 
-//module화 방법1
+//module화 방법1 : window 객체의 key:value pair로 함수 전달하기. 방법3과 동일하고 방법3이 더 깔끔하다.
 (function(global) {
   function delFunc(){
     if($('#input').html()!=='input'){
@@ -18,7 +18,7 @@
 })(window);//nodejs 에서는 window가 아니라 global이 사용된다. 서버사이드 구현할 때 조심해야 한다. atom local debugging package에서는 nodejs를 기본으로 사용하므로 atom 자체 콘솔에서 테스트에서 window를 인식하지 못해 console.log(window)하면 에러라고 나온다. console.log(global) 하면 값이 나온다.
 
 /*
-//모듈화 방법2
+//모듈화 방법2 : closure + IIFE pattern
 var delFunc = (function() {
   var global = 'ww'
   function delFunc(){
@@ -33,11 +33,21 @@ var delFunc = (function() {
   };
   return delFunc
 })();
+*/
 
-//모듈화 방법3 : underscore 과제 참조
+/*
+//모듈화 방법3 : underscore 과제 underbar.js 만든 방식. window 객체에 _:fucntion 의 key:value pair 만들기
 (function() {
   window._ = {};
 
+  _.reduce = function(){
+    //code
+  };
+  _.identity = function(){
+    //code
+  };
+
+  //이렇게 하면 window 객체에 _ 라는 key값을 가진 reduce, identity 함수가 value로 추가된다. => { _:reduce, _:identity }
 
 })();
 */
