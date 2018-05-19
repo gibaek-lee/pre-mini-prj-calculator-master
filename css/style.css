@@ -4,7 +4,15 @@ body {
   background-color: black;
   color: white;
 }
-
+.numAndCal-container {
+  display: flex;
+}
+.num-container {
+  margin: auto;
+}
+.cal-container {
+  margin: auto;
+}
 .numButton {
   padding: 5px 5px 5px 5px;
   border-color: white;
@@ -29,4 +37,3 @@ body {
   margin: auto
 
 }
-

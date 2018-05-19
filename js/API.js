@@ -1,5 +1,8 @@
-$(document).ready(function() {
+//이 파일이 DOM.js가 되야한다.
 
+//import {delFunc} from 'DOM.js';
+
+$(document).ready(function() {
   var value = '';
 
   $('.numButton').on('click', function(){
@@ -20,22 +23,16 @@ $(document).ready(function() {
     });
 
     $('#clear').on('click', function(){
-      $('#input').html(' ');
+      $('#input').html('input');
       value = '';
       console.log(value);
-    }); // clear버튼을 누르면 div의 html값을 제거한다.
+    }); // clear버튼을 누르면 value를 초기화한다.
 
     $('#result').on('click', function(){
-      $('#input').html(eval(value));
+      $('#input').html(eval(value));//eval없이 할 수 있다. 바꿔보기
       value = eval(value);
       console.log(value);
-    }); // =버튼을 실행할때 연산자를 풀어서 출력시켜준다.
+    }); // =버튼을 실행할때 eval로 string을 풀어서 연산자가 작동하게 하여 출력시켜준다.
 
-    $('#delete').on("click", function(){
-      var num = $('#input').html();
-      $('#input').html(num.slice(0,-1));
-      if(!($('#input').html().length)) return value = '';
-      console.log(value);
-    });
-
+    $('#delete').on("click", delFunc);//value 변수가 DOM.js에서 공유되지 않는 문제가 있다!!!
 });
