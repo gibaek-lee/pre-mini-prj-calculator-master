@@ -22,4 +22,3 @@ Enjoy :)
 ![Alt text](./img/img_calculator_sample_03.jpg "sample calculator image")
 
 ![Alt text](./img/img_calculator_sample_02.jpg "sample calculator image")
-
